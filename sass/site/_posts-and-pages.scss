@@ -1,0 +1,154 @@
+.sticky {
+	display: block;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.post {
+	margin-bottom: 4em;
+	padding-bottom: 1em;
+}
+
+.post-thumbnail {
+	margin-bottom: 1em;
+}
+
+.entry-meta,
+.entry-footer {
+  font-size: .75rem;
+  margin: .75em 0 2em;
+
+  .fa {
+    color: $gray-600;
+    margin-right: .3em;
+  }
+  span {
+    margin: 0 1.5em .4em 0;
+    display: inline-block;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $gray-600;
+
+      &:hover {
+        color: $gray-900;
+      }
+    }
+  }
+	.edit-link {
+		.btn {
+      		color: $white;
+
+      	&:hover {
+	        color: $white
+	    }
+	}
+  }
+}
+
+/* Posts Navigation */
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Screenreaders */
+.screen-reader-text {
+	@include sr-only;
+}
+
+/* 404 page */
+.error404 {
+	.content-area {
+		@include make-col-ready();
+		@include make-col(12);	
+	}
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.35rem;
+  font-size: 0.8rem;
+  color: $gray-700;
+}
+a {
+  color: #000000;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 a, h2 a, h3 a, h4 a {
+  font-weight: 400;
+}
+h1{
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
+  margin-top:0rem;
+}
+h2{
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+h3{
+  font-size: 1.5rem;  
+  letter-spacing: 0.05rem;
+}
+h4{
+  font-size: 1.1rem;  
+  letter-spacing: 0.05rem;
+}
+
+.underline::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 50px;
+  height: 5px;
+  position: relative;
+  opacity: 1;  
+  top: 14px;
+  background-image: url(images/dot-dash-dot.svg);
+}
+
+
+
+
+/* HOME PAGE STYLES */
+
+.home-banner{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin-top:0px;
+  height: 800px;
+}
+
+.intro-strap{
+  color: $white;
+  margin-top: 200px;
+}
+
+

@@ -1,0 +1,95 @@
+.site-header {
+	margin-bottom: 3em;
+}
+
+
+$sm-menu-width: 320px !default;
+$sm-menu-bg: $blue !default;
+
+$sm-link-color: $white !default;
+$sm-link-padding: 8px 20px !default;
+
+$sm-transition-dur: 300ms !default;
+$sm-transition-easing: ease-in-out !default;
+
+
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+.controls{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	left: auto;
+    transition: margin-right .4s;
+    z-index: 200;
+}
+.header-title {
+	background-color: #181832;
+	height: 95px;
+	padding-top: 1.5rem;
+}
+
+//SLIDER MENU
+
+.slide-menu {
+	position: fixed;
+	width: $sm-menu-width;
+	max-width: 100%;
+	height: 100vh;
+	top: 50px;
+	right: 0;
+	display: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: $sm-menu-bg;
+	transition: transform $sm-transition-dur $sm-transition-easing;
+	transform: translateX(100%);
+	will-change: transform;
+	z-index: 100;
+
+	.slider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transition: transform $sm-transition-dur $sm-transition-easing;
+		transform: translateX(0);
+		will-change: transform;
+	}
+
+	ul {
+		@include list-unstyled;
+
+		position: relative;
+		width: $sm-menu-width;
+		max-width: 100%;
+		margin: 0;
+
+		ul {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			display: none;
+		}
+
+		a {
+			display: block;
+			padding: $sm-link-padding;
+			color: $sm-link-color;
+			text-decoration: none;
+			border-bottom: 1px solid $white;
+			font-weight: 400;
+		}
+		a:hover{
+			color: $white;
+		}
+	}
+
+	&.no-transition, &.no-transition * {
+		transition: none !important;
+	}
+}
+
