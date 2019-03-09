@@ -62,7 +62,7 @@ if ( is_page_template( 'templates/home.php' ) ) {
     <div class="container-fluid">
     	<div class="row">
     		<div class="col header-title text-center text-white">
-    			<h3 class="underline">Conal Perrett</h3>
+    			<h2 class="underline">Conal Perrett</h2>
     		</div>
     	</div>
     </div>
