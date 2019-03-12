@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container-fluid home-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>'); height: 800px;">
+	<div class="container-fluid home-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>'); height: 800px; background-color: #0b0918;">
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-sm-12 col-md-4 text-center intro-strap">

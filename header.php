@@ -62,7 +62,11 @@ if ( is_page_template( 'templates/home.php' ) ) {
     <div class="container-fluid">
     	<div class="row">
     		<div class="col header-title text-center text-white">
-    			<h2 class="underline">Conal Perrett</h2>
+    			<h2 class="underline topTitle">
+    				<?php
+    					$url = home_url();
+    				?>
+    				<a href="<?php echo $url; ?>">Dr Conal Perrett</a></h2>
     		</div>
     	</div>
     </div>

@@ -16,7 +16,11 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="site-info text-center text-white">
-				<h2 class="underline">Dr Conal Perrett</h2>
+    			<h2 class="underline topTitle">
+    				<?php
+    					$url = home_url();
+    				?>
+    				<a href="<?php echo $url; ?>">Dr Conal Perrett</a></h2>
 				<p>+44 (0) 20 7034 8057 &nbsp;&nbsp;|&nbsp;&nbsp; info@thedevonshireclinic.co.uk</p>
 				&copy; <?php bloginfo( 'name' );
 						echo ' - ';
