@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container-fluid home-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>'); height: 800px; background-color: #0b0918;">
+	<div class="container-fluid home-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-sm-12 col-md-4 text-center intro-strap">
@@ -17,7 +17,7 @@
 							the_title();
 							?>
 						</h1>
-						<p>
+						<p id="qualifications" >
 						<?php
 							the_content();
 						?>
@@ -71,7 +71,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="container serviceWrapper">
+			<div class="container" id="serviceWrapper">
 				<div class="row text-center justify-content-center">
 					<?php if( have_rows('service_blocks') ): 
 						 while( have_rows('service_blocks') ): the_row(); 
@@ -79,11 +79,16 @@
 						$title = get_sub_field('title');
 						$link = get_sub_field('link');
 						$image = get_sub_field('image');
+						$i = $i+1;
 					?>
 					<div class="col-sm-12 col-md-4 col-lg-4 serviceBlock">
-						<div class="serviceImage" style="background-image: url('<?php echo $image; ?>'); background-size: cover; background-position: center center;">
-							<div class="titleBG"><h3 class="text-white"><?php echo $title ?></h3></div>
+						<div class="box<?php echo $i; ?>">
+							<a href="<?php echo $link; ?>">
+								<div class="serviceImage" style="background-image: url('<?php echo $image; ?>'); ">
+								</div>
+							</a>
 						</div>
+						<div class="titleBG"><h3 class="text-white"><?php echo $title ?></h3></div>
 					</div>
 
 					<?php endwhile;
@@ -103,6 +108,5 @@
 			</div>
 		</div>
 	</div>
-
 
 </article><!-- #post-## -->

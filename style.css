@@ -7650,7 +7650,7 @@ a.text-dark:hover, a.text-dark:focus {
     .entry-meta span a,
     .entry-footer span a {
       text-decoration: none;
-      color: #868e96; }
+      color: #ffffff; }
       .entry-meta span a:hover,
       .entry-footer span a:hover {
         color: #212529; }
@@ -7689,6 +7689,9 @@ a.text-dark:hover, a.text-dark:focus {
       flex: 0 0 100%;
   max-width: 100%; }
 
+#main {
+  margin-top: 95px; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.35rem;
@@ -7701,7 +7704,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #000000; }
+  color: #bab6c5; }
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
@@ -7714,7 +7717,7 @@ h1 a, h2 a, h3 a, h4 a {
 h1 {
   font-size: 2.5rem;
   letter-spacing: 0.05rem;
-  margin-top: 0rem; }
+  margin-top: 3rem; }
 
 h2 {
   font-size: 1.5rem;
@@ -7733,12 +7736,6 @@ h4 {
 
 .white {
   color: #ffffff; }
-
-.topTitle a {
-  color: #ffffff; }
-
-.topTitle a:hover {
-  color: #bab6c5; }
 
 .underline::after {
   content: '';
@@ -7845,13 +7842,17 @@ h4 {
   left: 0px;
   background-position: center top;
   background-repeat: no-repeat;
+  background-color: #0b0918;
   padding: 0px;
   margin-top: 0px;
   height: 800px; }
 
 .intro-strap {
   color: #fff;
-  margin-top: 200px; }
+  margin-top: 280px; }
+
+.about-strap {
+  margin-top: 250px; }
 
 .trans-panel {
   position: absolute;
@@ -7864,32 +7865,47 @@ h4 {
 .infoPanel {
   position: relative;
   color: #ffffff;
-  top: 2rem;
+  top: 1rem;
   margin-top: -200px;
   margin-bottom: 50px;
   height: 200px; }
+
+.infoPanel a {
+  color: #ffffff; }
+
+.infoPanel a:hover {
+  color: #bab6c5; }
 
 .introText {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #868e96; }
 
-.serviceWrapper {
-  padding: 5rem; }
+#serviceWrapper {
+  padding: 5rem;
+  overflow: hidden; }
 
 .serviceBlock {
-  padding: 1px;
-  height: 250px; }
+  padding: 0px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid white; }
+
+.box1, .box2, .box3 {
+  overflow: hidden;
+  position: relative; }
 
 .serviceImage {
-  height: 250px; }
+  height: 250px;
+  overflow: hidden;
+  background-size: 100%; }
 
 .titleBG {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
-  top: 1px;
-  left: 1px;
-  right: 1px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   width: auto;
   height: 40px;
   color: #ffffff;
@@ -7907,6 +7923,16 @@ h4 {
   height: 468px; }
 
 /* SERVICE PAGE STYLES */
+.service-banner {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin-top: 0px;
+  height: 468px; }
+
 .service-strap {
   margin-top: 100px; }
 
@@ -7915,7 +7941,12 @@ h4 {
   padding: 1.5rem;
   background-color: #ffffff;
   font-size: 1rem;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 0; }
+
+.treatmentBlock:hover {
+  background-color: #bab6c5; }
 
 /* TWO COLUMN FORM STYLING */
 .gform_wrapper.two-column_wrapper ul.gform_fields {
@@ -7968,16 +7999,64 @@ div.gform_footer.top_label {
     clear: both; } }
 
 @media only screen and (max-width: 768px) {
+  .gform_wrapper.two-column_wrapper ul.gform_fields.gform_column {
+    clear: both;
+    width: 100%; }
+  #main {
+    margin-top: 65px; }
   .trans-panel {
     display: none; }
   .infoPanel {
-    background-color: #f8f9fa;
+    background-color: #181832;
     color: #868e96;
-    margin-top: 20px;
+    margin-top: -20px;
+    padding-top: 20px;
     margin-bottom: 50px;
     height: auto; }
   .intro-strap {
-    margin-top: 50px; } }
+    margin-top: 250px; }
+  .about-strap {
+    margin-top: 170px; }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin-top: 3rem; }
+  h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem; }
+  .home-banner {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #0b0918;
+    background-size: cover;
+    padding: 0px;
+    margin-top: 0px;
+    height: 500px; }
+  .about-banner {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    padding: 0px;
+    margin-top: 0px;
+    height: 330px; }
+  .service-banner {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    padding: 0px;
+    margin-top: 0px;
+    height: 450px; }
+  .service-strap {
+    margin-top: 200px; } }
 
 /*--------------------------------------------------------------
 ## Widgets
@@ -8011,33 +8090,59 @@ div.gform_footer.top_label {
   margin-bottom: 3em; }
 
 .controls {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   left: auto;
   transition: margin-right .4s;
   z-index: 200; }
 
-.header-title {
+.home-header-title {
+  position: fixed;
+  top: 0;
   background-color: #181832;
   height: 95px;
-  padding-top: 1.5rem; }
+  width: 100%;
+  padding-top: 1.5rem;
+  z-index: 100;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 1s ease-out; }
+
+.home-header-title.fade-in {
+  opacity: 1; }
+
+.header-title {
+  position: fixed;
+  top: 0;
+  background-color: #181832;
+  height: 95px;
+  width: 100%;
+  padding-top: 1.5rem;
+  z-index: 100; }
+
+.topTitle {
+  display: block; }
+  .topTitle a {
+    color: #ffffff; }
+  .topTitle a:hover {
+    color: #bab6c5; }
 
 .slide-menu {
   position: fixed;
   width: 320px;
   max-width: 100%;
   height: 100vh;
-  top: 50px;
+  top: 0px;
   right: 0;
   display: none;
   overflow: hidden;
   box-sizing: border-box;
-  background: #546070;
+  background: #181832;
   transition: transform 300ms ease-in-out;
   transform: translateX(100%);
   will-change: transform;
-  z-index: 100; }
+  z-index: 150; }
   .slide-menu .slider {
     position: absolute;
     top: 0;
@@ -8052,7 +8157,7 @@ div.gform_footer.top_label {
     position: relative;
     width: 320px;
     max-width: 100%;
-    margin: 0; }
+    margin-top: 0px; }
     .slide-menu ul ul {
       position: absolute;
       top: 0;
@@ -8063,12 +8168,30 @@ div.gform_footer.top_label {
       padding: 8px 20px;
       color: #fff;
       text-decoration: none;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #bab6c5;
       font-weight: 400; }
     .slide-menu ul a:hover {
-      color: #fff; }
+      color: #bab6c5; }
   .slide-menu.no-transition, .slide-menu.no-transition * {
     transition: none !important; }
+
+@media only screen and (max-width: 768px) {
+  .home-header-title {
+    background-color: #181832;
+    height: 65px;
+    width: 100%;
+    padding-top: 0.7rem; }
+  .header-title {
+    background-color: #181832;
+    height: 65px;
+    width: 100%;
+    padding-top: 0.7rem; }
+  .topTitle a {
+    color: #ffffff;
+    font-size: 0.9rem; }
+  .topTitle a:hover {
+    color: #bab6c5;
+    font-size: 0.9rem; } }
 
 /*--------------------------------------------------------------
 ## Footer
@@ -8077,6 +8200,14 @@ div.gform_footer.top_label {
   padding: 4rem 0;
   margin-top: 0rem;
   background-color: #181832; }
+
+.site-footer a {
+  color: #ffffff;
+  font-weight: 400; }
+
+.site-footer a:hover {
+  text-decoration: none;
+  color: #bab6c5; }
 
 .site-content {
   word-break: break-word; }
@@ -8189,7 +8320,7 @@ img {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: #bab6c5;
     border-radius: 2px;
     position: absolute;
     transition-property: transform;

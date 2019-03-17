@@ -21,7 +21,7 @@
     					$url = home_url();
     				?>
     				<a href="<?php echo $url; ?>">Dr Conal Perrett</a></h2>
-				<p>+44 (0) 20 7034 8057 &nbsp;&nbsp;|&nbsp;&nbsp; info@thedevonshireclinic.co.uk</p>
+				<p><a href="tel:+44 (0) 20 7034 8057">+44 (0) 20 7034 8057</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="mailto:info@thedevonshireclinic.co.uk">info@thedevonshireclinic.co.uk</a></p>
 				&copy; <?php bloginfo( 'name' );
 						echo ' - ';
 						echo date("Y"); ?>

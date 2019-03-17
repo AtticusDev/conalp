@@ -40,7 +40,7 @@
 
     a {
       text-decoration: none;
-      color: $gray-600;
+      color: #ffffff;
 
       &:hover {
         color: $gray-900;
@@ -77,6 +77,10 @@
 	}
 }
 
+#main {
+  margin-top: 95px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.35rem;
@@ -89,7 +93,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #000000;
+  color: #bab6c5;
 }
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
@@ -102,7 +106,7 @@ h1 a, h2 a, h3 a, h4 a {
 h1{
   font-size: 2.5rem;
   letter-spacing: 0.05rem;
-  margin-top:0rem;
+  margin-top:3rem;
 }
 h2{
   font-size: 1.5rem;
@@ -124,14 +128,6 @@ h4{
   color: #ffffff;
 }
 
-.topTitle {
-  a {
-    color: #ffffff;
-  }
-  a:hover {
-    color: #bab6c5;
-  }
-}
 
 .underline::after{
   content: '';
@@ -244,6 +240,7 @@ h4{
   left: 0px;
   background-position: center top;
   background-repeat: no-repeat;
+  background-color: #0b0918;
   padding: 0px;
   margin-top:0px;
   height: 800px;
@@ -251,7 +248,10 @@ h4{
 
 .intro-strap{
   color: $white;
-  margin-top: 200px;
+  margin-top: 280px;
+}
+.about-strap {
+  margin-top: 250px;  
 }
 .trans-panel {
   position: absolute;
@@ -265,32 +265,49 @@ h4{
 .infoPanel {
   position: relative;
   color: #ffffff;
-  top: 2rem;
+  top: 1rem;
   margin-top: -200px;
   margin-bottom: 50px;
   height: 200px;
 }
+
+.infoPanel a {
+  color: #ffffff;
+}
+.infoPanel a:hover {
+  color: #bab6c5;
+}
+
 .introText {
   font-size: 1.1rem;
   line-height: 1.5;
   color: $gray-600;
 }
-.serviceWrapper{
+#serviceWrapper{
   padding: 5rem;
+  overflow: hidden;
 }
 .serviceBlock{
-  padding:1px;
+  padding: 0px;
   height: 250px;
+  overflow:hidden;
+  border: 1px solid white;
+}
+.box1, .box2, .box3 {
+  overflow:hidden;
+  position:relative;
 }
 .serviceImage {
   height: 250px;
+  overflow: hidden;
+  background-size: 100%;
 }
 .titleBG{
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
-  top: 1px;
-  left: 1px;
-  right: 1px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   width: auto;
   height: 40px;
   color: #ffffff;
@@ -314,6 +331,17 @@ h4{
 
 /* SERVICE PAGE STYLES */
 
+.service-banner{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin-top:0px;
+  height: 468px;
+}
+
 .service-strap{
   margin-top: 100px;
 }
@@ -323,6 +351,12 @@ h4{
   background-color: #ffffff;
   font-size: 1rem;
   margin-bottom: 10px;
+  border: 0;
+  border-radius: 0;
+}
+
+.treatmentBlock:hover {
+  background-color: #bab6c5;
 }
 
 /* TWO COLUMN FORM STYLING */
@@ -388,19 +422,87 @@ div.gform_footer.top_label {
 
 @media only screen and (max-width: 768px) {
 
+  .gform_wrapper.two-column_wrapper ul.gform_fields.gform_column {
+    clear: both;
+    width: 100%;
+  }
+
+  #main {
+    margin-top: 65px;
+  }
+
   .trans-panel {
     display: none;
   }
 
   .infoPanel {
-    background-color: $gray-100;
+    background-color: #181832;
     color: $gray-600;
-    margin-top: 20px;
+    margin-top: -20px;
+    padding-top: 20px;
     margin-bottom: 50px;
     height: auto;
   }
   .intro-strap{
-    margin-top: 50px;
+    margin-top: 250px;
   }
+
+  .about-strap {
+    margin-top: 170px;  
+  }
+
+  h1{
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin-top:3rem;
+  }
+
+  h2{
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  }
+
+
+  .home-banner{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #0b0918;
+    background-size: cover;
+    padding: 0px;
+    margin-top:0px;
+    height: 500px;
+  }
+
+  .about-banner{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    padding: 0px;
+    margin-top:0px;
+    height: 330px;
+  }
+
+  .service-banner{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    padding: 0px;
+    margin-top:0px;
+    height: 450px;
+  }
+
+  .service-strap{
+    margin-top: 200px;
+  }
+
 
 }

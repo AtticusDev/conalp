@@ -12,7 +12,7 @@
 	<div class="container-fluid about-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');  background-color: #0b0918;">
 			<div class="container">
 				<div class="row justify-content-end">
-					<div class="col-sm-12 col-md-6 text-center intro-strap">
+					<div class="col-sm-12 col-md-6 text-center about-strap">
 						<p>
 						<?php
 							the_content();
@@ -59,5 +59,4 @@
 			</div>
 		</div>
 	</div>
-
 </article><!-- #post-## -->

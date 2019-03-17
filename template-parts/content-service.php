@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container-fluid about-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');  background-color: #ffffff;">
+	<div class="container-fluid service-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');  background-color: #ffffff;">
 			<div class="container">
 				<div class="row justify-content-left">
 					<div class="col-sm-12 col-md-4 service-strap">
@@ -37,8 +37,8 @@
 					</div>
 				</div>
 				<div class="row justify-content-center text-center">
-						<?php if( have_rows('skin_cancer_treatment') ): 
-							 while( have_rows('skin_cancer_treatment') ): the_row(); 
+						<?php if( have_rows('service_treatment') ): 
+							 while( have_rows('service_treatment') ): the_row(); 
 							// vars
 						 	$title = get_sub_field('title');
 							$link = get_sub_field('link');
